@@ -1,0 +1,34 @@
+<h1>Cortex Bot</h1>
+
+
+<div style="
+    width: 600px;   
+    overflow: auto;    
+    scrollbar-base-color:#ffeaff;
+">
+<ng-container *ngFor="let message of messages | async">
+
+  <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                    'to':   message.sentBy === 'user' }">
+    {{ message.content }}
+  </div>
+
+</ng-container>
+
+
+<label for="nameField">Your Message</label>
+
+
+<input [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text"><br>
+<label for="nameField">Your files</label>
+<!--<div ng-controller="MyCtrl">-->
+	<div>
+  <input type="file" ngf-select="onFileSelect($files)" multiple>
+</div>
+<div>
+	<button onclick="onFileSelect($files)">upload</button>
+</div>
+<!--</div>-->
+</div>
+<button (click)="sendMessage()">Send</button>
+
