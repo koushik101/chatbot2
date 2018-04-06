@@ -1,23 +1,125 @@
 .message {
     border-radius: 50px;
     margin: 0 15px 10px;
-    padding: 15px 20px;
-    position: relative;
+    right: 500px;
+    position: fixed;
     font-weight: bold;
+    padding: 1em;
+    text-align: left;
+  line-height: 1.5em;
+  box-shadow: 0 0 6px #B2B2B2;
+
 }
 .message.to {
     background-color: #2095FE;
     color: #fff;
-    margin-left: 100px;
+    margin-left: 400px;
+    margin-right: 10px;
+    margin-top:10px;
     text-align: right;
+    
+        background-image: linear-gradient(bottom, rgb(172,228,75) 25%, rgb(122,205,71) 100%);
+background-image: -o-linear-gradient(bottom, rgb(172,228,75) 25%, rgb(122,205,71) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(172,228,75) 25%, rgb(122,205,71) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(172,228,75) 25%, rgb(122,205,71) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(172,228,75) 25%, rgb(122,205,71) 100%);
+background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.25, rgb(172,228,75)),
+    color-stop(1, rgb(122,205,71))
+);
+    float: right;
+border: solid 1px rgba(0, 0, 0, 0.5);
+    /* vendor rules */
+    border-radius: 20px;
+    /* vendor rules */
+    box-shadow: inset 0 5px 5px rgba(255, 255, 255, 0.4), 0 1px 3px rgba(0, 0, 0, 0.2);
+    /* vendor rules */
+    box-sizing: border-box;
+    clear: both;
+    float: left;
+    margin-bottom: 20px;
+    padding: 8px 30px;
+    position: relative;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+    width: auto;
+    max-width: 100%;
+    word-wrap: break-word;
+    z-index: -2;
+    left: -9px;
+
 }
 .message.from {
-    background-color: #E5E4E9;
+    
+    background-color: #A52A2A;
     color: #363636;
-    margin-right: 100px;
+    margin-right: 400px;
+    margin-left: 10px;
+    margin-top: 10px;
+        background-image: linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
+background-image: -o-linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
+background-image: -moz-linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
+background-image: -webkit-linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
+background-image: -ms-linear-gradient(bottom, rgb(210,244,254) 25%, rgb(149,194,253) 100%);
+background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.25, rgb(210,244,254)),
+    color-stop(1, rgb(149,194,253))
+);
+    border: solid 1px rgba(0, 0, 0, 0.5);
+    /* vendor rules */
+    border-radius: 20px;
+    /* vendor rules */
+    box-shadow: inset 0 5px 5px rgba(255, 255, 255, 0.4), 0 1px 3px rgba(0, 0, 0, 0.2);
+    /* vendor rules */
+    box-sizing: border-box;
+    clear: both;
+    float: left;
+    margin-bottom: 20px;
+    padding: 8px 30px;
+    position: relative;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
+    width: auto;
+    max-width: 100%;
+    word-wrap: break-word;
+    z-index: -2;
+    left: -9px;
 
+}
+.message.from:after {
+ content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-right-color: #00aabb;
+    border-left: 0;
+    margin-top: -5px;
+    margin-left: -7px;
+    }
+
+    .message.to:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-left-color: #2095FE;
+    border-right: 0;
+    margin-top: -5px;
+    margin-right: -7px;
 }
 .message.to + .message.to,
 .message.from + .message.from {
 margin-top: -10px;
+margin-bottom: 50px;
+margin-right: 100px;
 }
